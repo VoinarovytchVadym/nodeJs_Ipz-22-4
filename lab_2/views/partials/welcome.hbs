@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome to WeatherInfo</title>
+</head>
+<body>
+<header>
+    {{>header}}
+</header>
+
+
+<main class="container pb-5">
+    <div class="row">
+        <h1 class="text-center">
+            Hello, Express
+        </h1>
+        <div class="col text-center">
+            <button id="getStarted" type="button" class="btn btn-lg btn-primary mx-auto">
+                Get started
+            </button>
+        </div>
+    </div>
+</main>
+<footer>
+    {{>footer}}
+</footer>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function (event){
+        let button = document.getElementById("getStarted");
+
+        button.addEventListener("click", function (){
+            window.location.href = "http://localhost:3000/weather";
+        });
+    });
+</script>
+</html>
