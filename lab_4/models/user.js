@@ -63,8 +63,8 @@ userSchema.pre('save', async function(next) {
     }
 });
 
-userSchema.statics.findOneByCredentials = async function (email, password) {
-    const user = await this.findOne({ email });
+userSchema.statics.findOneByCredentials = async function(email, password) {
+    const user = await User.findOne({ email });
 
     if (!user) {
         throw new Error('Incorrect email');

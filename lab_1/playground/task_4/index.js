@@ -1,4 +1,4 @@
-// Load the full build.
+// Load the full build
 var _ = require('lodash');
 
 // ділить масив на частини
